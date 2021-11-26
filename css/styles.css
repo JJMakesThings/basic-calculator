@@ -28,6 +28,7 @@ body{
         padding: 15px;
         text-align: right;
         font-size: 1.2rem;
+        min-height: 54px;
     }
 
     #calculator__buttons {
