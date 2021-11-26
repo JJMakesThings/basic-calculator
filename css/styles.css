@@ -5,6 +5,10 @@
 html{
     background-color: honeydew;
 }
+body{
+    margin:0px;
+}
+
 #calculator {
     display:flex;
     width: 360px;
@@ -12,8 +16,8 @@ html{
     margin: 0px auto;
     margin-top: 20px;
     background-color: grey;
-    border-radius: 5px;
-    border: 4px solid black;
+    border-radius: 10px;
+    border: 2px solid black;
 }
     #calculator__screen {
         flex:1;
@@ -21,11 +25,14 @@ html{
         margin:10px;
         border-radius: 5px;
         border: 1px solid black;
-        padding: 10px;
+        padding: 15px;
+        text-align: right;
+        font-size: 1.2rem;
     }
 
     #calculator__buttons {
-        display:block;
+        display:flex;
+        flex-direction: row;
     }
 
         #buttons__wrap {
@@ -34,6 +41,7 @@ html{
             flex-wrap: wrap;
             justify-content: space-between;
             margin:10px;
+            margin-right:2px;
         }
             .modifier,
             .operator,
@@ -43,21 +51,42 @@ html{
                 height:40px;
                 border: 1px solid black;
                 border-radius: 5px;
+                font-size: 1rem;
             }
 
             .modifier {
-                background-color: whitesmoke;
+                background-color: rgb(218, 218, 218);
             }
             .operator {
                 background-color: orange;
                 border-radius: 20px;
-                margin: 0 10px;
-                flex:0 0 60px;
+                margin: 2px 5px;
+                width:60px;
+                flex:1 0 20px;
             }
+            .operator:hover,
+            .operator:active{
+                background-color: rgb(255, 195, 83);
+            }
+
             .number{
                 background-color: white;
             }
-
-            .number#zero {
-                flex:2 0 80;
+            .number:hover,
+            .number:active,
+            .modifier:hover,
+            .modifier:active{
+                background-color: rgb(255, 244, 197);
             }
+
+            #zero {
+                flex:2 0 160px;
+            }
+        
+        #buttons__operators{
+            display:flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin:10px 5px;
+        }
+        
