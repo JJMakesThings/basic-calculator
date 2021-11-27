@@ -39,7 +39,7 @@ function evaluate(string){
         let top = splits["0"];
         let bottom = splits["1"];
         if (!isNaN(top) && !isNaN(bottom)){
-            return Math.round((top+bottom)*round)/round;
+            return Math.round(((+top)+(+bottom))*round)/round;
         };
     } else if (string.includes("-")){
         let splits = string.split("-");
